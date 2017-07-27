@@ -1,9 +1,0 @@
-[
-    {
-        "email":"nir@nir.com",
-        "password": "nir123",
-        "firstName":"Nir",
-        "lastName": "Channes",
-        "data":"app/data/nir-recipes.json"
-    }
-]
