@@ -3,16 +3,34 @@
        
         "blessingTitle" : "Happy Birthday",
         "name": "anonym",
-        "age" : 40,
+        "age" : 10,
          "blessingText" : "I wish you jhakdsfhshglidjglkdkf;",
         "imageUrl" : "https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95"
     
     },
     {
        
-        "blessingTitle" : "Happy Birthday",
-        "name": "anonym",
+        "blessingTitle" : "Happy Birthday1",
+        "name": "1anonym",
         "age" : 40,
+         "blessingText" : "I wish you jhakdsfhshglidjglkdkf;",
+        "imageUrl" : "https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95"
+    
+     },
+    {
+       
+        "blessingTitle" : "Happy Birthday2",
+        "name": "2anonym",
+        "age" : 20,
+         "blessingText" : "I wish you jhakdsfhshglidjglkdkf;",
+        "imageUrl" : "https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95"
+    
+    },
+    {
+       
+        "blessingTitle" : "Happy Birthday3",
+        "name": "3anonym",
+        "age" : 30,
          "blessingText" : "I wish you jhakdsfhshglidjglkdkf;",
         "imageUrl" : "https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95"
     

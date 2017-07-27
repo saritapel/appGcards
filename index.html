@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="RecipeApp">
+<html lang="en" ng-app="appGCard">
 
 <head>
     <title></title>
@@ -21,7 +21,7 @@
 
     <!--App Stuff-->
     <script src="app/app.js"></script>
-
+     <script src="app/cards/cardsGalleryCtrl.js"></script>
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -31,7 +31,7 @@
         <div class="jumbotron">
             <div class="container">
                 <h1>Greeting Cards!</h1><br>
-                <h4> Send your greeting-card to your dears & friands</h4>
+                <h4> Send your greeting-card to your dears & friends</h4>
             </div>
         </div>
     </header>
@@ -88,32 +88,45 @@
 
 
 
+<!--
+
+<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">
+		<div class="text-center  well">
+    <img src="https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95" class="img-responsive img-thumbnail ">
+	<h4 class="center-block">Dog1</h4>
+</div>
+</div>
+<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">
+		<div class="text-center  well">
+    <img src="https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95" class="img-responsive img-thumbnail ">
+	<h4 class="center-block">Dog1</h4>
+</div>
+</div>
+<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">
+		<div class="text-center  well">
+    <img src="https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95" class="img-responsive img-thumbnail ">
+	<h4 class="center-block">Dog1</h4>
+</div>
+</div>
+<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">
+		<div class="text-center  well">
+    <img src="https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95" class="img-responsive img-thumbnail ">
+	<h4 class="center-block">Dog1</h4>
+</div>
+</div>
+
+-->
 
 
-<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">
-		<div class="text-center  well">
-    <img src="https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95" class="img-responsive img-thumbnail ">
-	<h4 class="center-block">Dog1</h4>
-</div>
-</div>
-<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">
-		<div class="text-center  well">
-    <img src="https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95" class="img-responsive img-thumbnail ">
-	<h4 class="center-block">Dog1</h4>
-</div>
-</div>
-<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">
-		<div class="text-center  well">
-    <img src="https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95" class="img-responsive img-thumbnail ">
-	<h4 class="center-block">Dog1</h4>
-</div>
-</div>
-<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">
-		<div class="text-center  well">
-    <img src="https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95" class="img-responsive img-thumbnail ">
-	<h4 class="center-block">Dog1</h4>
-</div>
-</div>
+
+
+
+
+
+
+  <ng-view></ng-view>
+
+
 </body>
 
 </html>

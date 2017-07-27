@@ -1,0 +1,20 @@
+
+<div class="container">
+    
+   
+
+    
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" ng-repeat="cards in cardsArr" >
+        
+        <div class="well card-item" ng-click="openDetails($index)">
+            
+            <img ng-src="{{cards.imageUrl}}" class="img-responsive" alt="Image">
+            <h3>{{cards.name}}</h3>
+            <p>{{cards.blessingText}}</p>
+
+        </div>
+        
+    </div>
+    
+    
+</div>
