@@ -21,45 +21,71 @@
 
     <!--App Stuff-->
     <script src="app/app.js"></script>
-    <script src="app/model/user.js"></script>
-    <script src="app/model/recipe.js"></script>
-    <script src="app/shared/navCtrl.js"></script>
-    <script src="app/home/homeCtrl.js"></script>
-    <script src="app/login/loginCtrl.js"></script>
-    <script src="app/recipe/recipeGalleryCtrl.js"></script>
-    <script src="app/recipe/recipeDetailsCtrl.js"></script>
-    <script src="app/recipe/newRecipeCtrl.js"></script>
+
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body ng-controller="TestCtrl">
-    
-    <nav class="navbar navbar-default" role="navigation" ng-controller="NavCtrl">
+<body>
+
+    <header>
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Greeting Cards!</h1><br>
+                <h2> Send your greeting-card to your dears & friands</h2>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Recipe Book</a>
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="#">Greeting Cards</a>
         </div>
-    
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li ng-show="isLoggedIn()"><a href="#!/recipes">Recipes</a></li>
-                <li ng-show="isLoggedIn()"><a href="#!/new">New Recipe</a></li>
+                <li class="active"><a href="#">Gallery</a></li>
+                <li><a href="#">Step 1</a></li>
+                <li><a href="#">Step 2</a></li>
+                <li><a href="#">Step 3</a></li>
             </ul>
+
             <ul class="nav navbar-nav navbar-right">
-                <li ng-hide="isLoggedIn()"><a href="#">Login</a></li>
-                <li ng-show="isLoggedIn()"><a href="#">Logout</a></li>
+                <li><a data-toggle="modal" href='#modal-id'>Login</a></li>
+
             </ul>
-        </div><!-- /.navbar-collapse -->
+        </div>
     </nav>
-    
-    <ng-view></ng-view>
+    <div class="modal fade" id="modal-id">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST" role="form" class="modal-header">
+                        <div class="form-group ">
+                            <label for="">UserName</label>
+                            <input type="text" class="form-control" id="" placeholder="Input UserName">
+                            <label for="">Password</label>
+                            <input type="text" class="form-control" id="" placeholder="Input Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary pull-right">send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
 </body>
 
