@@ -87,12 +87,22 @@
 
 
 
+
+
+
   <ng-view></ng-view>
 
 <br><br><br><br>
 
 
+ <div  ng-controller="galleryCtrl">
+      <div class="imageGallery" ng-repeat="actor in actors | filter:filterByFullName | orderBy:orderProp" ng-click="liClicked(actor)" ng-class="{'item-selected':actor.isSelected}">
 
+        <img class="imageGallery" src="{{actor.img}}" />
+        <p class="actorname"><a href="{{actor.url}}" target="_blank">{{actor.fullName()}}</a></p>
+      </div>
+
+    </div>
 
 
 <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 " >
