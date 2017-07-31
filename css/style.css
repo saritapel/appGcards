@@ -40,3 +40,25 @@ h4 {
     color: inherit;
     background-color: #a1eaff;
 }
+.imageGallery {
+  float: left;
+  padding: 1px;
+}
+
+img {
+  height: 248px;
+  width: 320px;
+  
+}
+
+.item-selected {
+  border: 4px solid red;
+}
+
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

@@ -1,134 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<title>Bootstrap Example</title>
-	<meta charset="utf-8">
- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <script src="app.js"></script>
+  <!--<script src="app/Actors/C.js"></script>-->
+
 </head>
 
-<body>
+<body ng-app="mActors">
+
+  <div>
+    <header class="headertitle">
+      SARIT Actors and Movies APP
+    </header>
+    <nav class="headertitle">
+
+      <button> <a href="#!/actors">Actors</a> </button>
+      <button><a href="#!/movies">Movies</a> </button>
+    </nav>
+  </div>
+
+  <div class="clearfix"></div>
+  
+
+  <main ng-view class="mainarea">
+
+  </main>
 
 
-<nav class="navbar navbar-default" role="navigation">
-	<!-- Brand and toggle get grouped for better mobile display -->
-	<div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-		<a class="navbar-brand" href="#">Home</a>
-	</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br> --------------------------------------------------------
 
-	<!-- Collect the nav links, forms, and other content for toggling -->
-	<div class="collapse navbar-collapse navbar-ex1-collapse">
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">First</a></li>
-			<li ><a href="#">Second</a></li>
-		</ul>
-		<!--<form class="navbar-form navbar-left" role="search">
-			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
-			</div>
-			<button type="submit" class="btn btn-default">Submit</button>
-		</form>-->
-		<ul class="nav navbar-nav navbar-right">
-			<li><a data-toggle="modal" href='#modal-id'>Login</a></li>
-			<!--<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li><a href="#">Separated link</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div> /.navbar-collapse -->
-</nav>
+  <h1>Movies Actors!</h1>
 
+  <form>
+    <input type="text" name="search" id="search" placeholder="Filter actors" ng-model="filterText" /> Sort by:
+    <select ng-model="orderProp">
+      <option value="">None</option>
+      <option value="firstName">First Name</option>
+      <option value="lastName">Last Name</option>
 
-<!--<a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Trigger modal</a>-->
-<div class="modal fade" id="modal-id">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Login</h4>
-			</div>
-			<div class="modal-body">
-				<form action="" method="POST" role="form" class="modal-header">
+    </select>
+    <br>
+    <br>
 
+    <div class="gallery" ng-controller="ActorsListCtrl">
+      <div class="imageGallery" ng-repeat="actor in actors | filter:filterByFullName | orderBy:orderProp" ng-click="liClicked(actor)" ng-class="{'item-selected':actor.isSelected}">
 
-	<div class="form-group ">
-		<label for="">UserName</label>
-		<input type="text" class="form-control" id="" placeholder="Input UserName">
-<label for="">Password</label>
-		<input type="text" class="form-control" id="" placeholder="Input Password">
+        <img class="imageGallery" src="{{actor.img}}" />
+        <p class="actorname"><a href="{{actor.url}}" target="_blank">{{actor.fullName()}}</a></p>
+      </div>
 
-	</div>
+    </div>
+  </form>
+  <div class="clearfix"></div>
 
-	
-
-	<button type="submit" class="btn btn-primary pull-right">send</button>
-</form>
-			</div>
-			
-		</div>
-	</div>
-</div>
+  <br>
+  <br>
 
 
 
 
 
-	<div class="jumbotron " >
-		<div class="container text-center" >
-			<h1>Hello, world!</h1>
-			<p>Contents ...</p>
-			<p>
-				<a class="btn btn-primary btn-lg">Learn more</a>
-			</p>
-		</div>
-	</div>
-	 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center  well">
-
-			<img src="https://s-media-cache-ak0.pinimg.com/736x/15/b0/6b/15b06ba1f762d9cd9ae3e7084cb7495e--dog-carrier-chi-chi.jpg" class="img-responsive img-circle ">
-	<h1  class="center-block">Dog1</h1>
-	<p>RGIOEOIRGIADJFAELG
-		FGP[GKEPOKGPDLKFP[RH
-		RPR[HL[HL[RLH[LR[L[RERRRRR
-	</p>
 
 
-	</div>
-	 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center well">
-
-			<img src="https://s-media-cache-ak0.pinimg.com/736x/15/b0/6b/15b06ba1f762d9cd9ae3e7084cb7495e--dog-carrier-chi-chi.jpg" class="img-responsive img-circle">
-	<h1>Dog2</h1>
-	<p>RGIOEOIRGIADJFAELG
-		FGP[GKEPOKGPDLKFP[RH
-		RPR[HL[HL[RLH[LR[L[RERRRRR
-	</p>
+  <!-- here is the second modellllllllllllllllllllllllllllllllllllllll -->
+  <br>
+  <br>
 
 
-	</div>
-		 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center well">
+  <div>
+    <h1>MOVILIM</h1>
 
-			<img src="https://s-media-cache-ak0.pinimg.com/736x/15/b0/6b/15b06ba1f762d9cd9ae3e7084cb7495e--dog-carrier-chi-chi.jpg" class="img-responsive img-circle">
-	<h1>Dog3</h1>
-	<p>RGIOEOIRGIADJFAELG
-		FGP[GKEPOKGPDLKFP[RH
-		RPR[HL[HL[RLH[LR[L[RERRRRR
-	</p>
 
-	</div>
+    <form>
+      <input type="text" name="search" id="search" placeholder="Filter movies" ng-model="filtermovie" /> Sort by:
+      <select ng-model="orderProp">
+        <option value="">None</option>
+        <option value="movieName">Movie Name</option>
+        <option value="movieLength">Movie Length</option>
+        <option value="movieActor">Movie Actor</option>
+        <option value="movieDirector">Movie Director</option>
 
+      </select>
+      <br>
+      <br>
+    </form>
+    <div ng-controller="MoviesListCtrl">
+      <movie ng-repeat="movie in movies | filter:filterBymovueName | orderBy:orderProp"></movie>
+    </div>
+    <!--this div moved to movie.html - by directive /////////
+<div ng-controller="MoviesListCtrl">
+  -->
+    <div class="movieText" ng-repeat="movie in movies | filter:filterBymovueName | orderBy:orderProp">
+      <a href="{{movie.url}}" target="_blank">{{movie.movieName}}</a>, ({{movie.movieLength}}, {{movie.movietimeunit}}), {{movie.movieActor}}, {{movie.movieDirector}}
+    </div>
+
+  </div>
+
+
+
+
+  <div class="clearfix"></div>
 
 
 </body>

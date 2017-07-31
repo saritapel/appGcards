@@ -18,14 +18,14 @@
     <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-
+<link rel="stylesheet" href="css/style.css"> 
     <!--App Stuff-->
     <script src="app/app.js"></script>
-     <script src="app/cards/cardsGalleryCtrl.js"></script>
-    <link href="css/style.css" rel="stylesheet">
+      
+  
 </head>
 
-<body>
+<body  ng-app="appGCard">
 
     <header>
         <div class="jumbotron">
@@ -95,14 +95,29 @@
 <br><br><br><br>
 
 
- <div  ng-controller="galleryCtrl">
-      <div class="imageGallery" ng-repeat="actor in actors | filter:filterByFullName | orderBy:orderProp" ng-click="liClicked(actor)" ng-class="{'item-selected':actor.isSelected}">
+ <form>
+    <input type="text" name="search" id="search" placeholder="Filter actors" ng-model="filterText" /> Sort by:
+    <select ng-model="orderProp">
+      <option value="">None</option>
+      <option value="cardTitle">Card Title</option>
+     
 
-        <img class="imageGallery" src="{{actor.img}}" />
-        <p class="actorname"><a href="{{actor.url}}" target="_blank">{{actor.fullName()}}</a></p>
+    </select>
+    <br>
+    <br>
+ <div  ng-controller="galleryCtrl">
+      <div class="imageGallery" ng-repeat="card in cards |  orderBy:orderProp" ng-click="liClicked(cards)" ng-class="{'item-selected':cards.isSelected}">
+
+        <img class="imageGallery" src="{{cards.img}}" />
+        <p class="actorname"><a href="{{cards.url}}" target="_blank">{{cards.cardTitle}}</a></p>
       </div>
 
     </div>
+ </div>
+  </form>
+  <div class="clearfix"></div>
+
+
 
 
 <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 " >
@@ -133,8 +148,7 @@
 <!---->
 
 
-
-
+ 
 
 
 
