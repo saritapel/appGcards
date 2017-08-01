@@ -1,4 +1,4 @@
-appGCard = angular.module("appcard", ["ngRoute", "ngAnimate", "ui.bootstrap"]);
+var appGCard = angular.module("appcard", ["ngRoute", "ngAnimate", "ui.bootstrap"]);
 
 
 
@@ -31,11 +31,11 @@ appGCard.controller("galleryCtrl", function ($scope, $http) {
 
 
 
-  $scope.filterBycardTitle = function(cards) {
+  $scope.filterBycardTitle = function(card) {
 
     if (!$scope.filterText) {
       return true;
-    } else if (cards.cardTitle.toLowerCase().indexOf($scope.filterText.toLowerCase()) != -1) {
+    } else if (card.cardTitle.toLowerCase().indexOf($scope.filterText.toLowerCase()) != -1) {
       return true;
     } else {
       return false;
@@ -43,10 +43,10 @@ appGCard.controller("galleryCtrl", function ($scope, $http) {
   };
 
 
-  $scope.liClicked = function(cards) {
+  $scope.liClicked = function(card) {
     // loop through actors to reset them to false
-    for (var i = 0; i < $scope.cards.length; i++) {
-      $scope.cards[i].isSelected = false;
+    for (var i = 0; i < $scope.card.length; i++) {
+      $scope.card[i].isSelected = false;
     }
 
     cards.isSelected = true;

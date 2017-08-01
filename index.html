@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="appGCard">
+<html lang="en" ng-app="appcard">
+
 
 <head>
     <title></title>
@@ -18,14 +19,14 @@
     <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"> 
+
     <!--App Stuff-->
     <script src="app/app.js"></script>
       
-  
+  <link rel="stylesheet" href="css/style.css"> 
 </head>
 
-<body  ng-app="appGCard">
+<body  ng-app="appcard">
 
     <header>
         <div class="jumbotron">
@@ -105,15 +106,15 @@
     </select>
     <br>
     <br>
- <div  ng-controller="galleryCtrl">
-      <div class="imageGallery" ng-repeat="card in cards |  orderBy:orderProp" ng-click="liClicked(cards)" ng-class="{'item-selected':cards.isSelected}">
+ <div  ng-controller="galleryCtrl" >
+      <div class="imageGallery text-center  well center-block" ng-repeat="card in cards |  orderBy:orderProp" ng-click="liClicked(cards)" ng-class="{'item-selected':cards.isSelected}">
 
-        <img class="imageGallery" src="{{cards.img}}" />
-        <p class="actorname"><a href="{{cards.url}}" target="_blank">{{cards.cardTitle}}</a></p>
+        <img class="imageGallery " src="{{card.img}}" />
+        <p class="actorname"><a href="{{card.url}}" target="_blank">{{card.cardTitle}}</a></p>
       </div>
 
     </div>
- </div>
+
   </form>
   <div class="clearfix"></div>
 
@@ -145,6 +146,11 @@
 </div>
 </div>
 
+
+
+
+
+  <div class="clearfix"></div>
 <!---->
 
 

@@ -29,9 +29,6 @@ h4 {
     font-size: 4em;
 }
 
-.recipe-item {
-    cursor: pointer;
-}
 
 .jumbotron {
     padding-top: 30px;
@@ -42,8 +39,16 @@ h4 {
 }
 .imageGallery {
   float: left;
-  padding: 1px;
+  padding: 20px;
 }
+
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin: 20px;
+}
+
+
 
 img {
   height: 248px;
