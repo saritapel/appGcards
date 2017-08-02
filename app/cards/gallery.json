@@ -1,22 +1,22 @@
 [
     {
         "cardTitle": "Happy Birthday",
-        "img": "https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95",
-        "url": "/cards/HB00.html"
+        "img": "app/cards/images/happyB01.jpg",
+        "url": "app/cards/HB00.html"
     },
     {
         "cardTitle": "Dad Happy Birthday",
-        "img": "https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95",
+        "img": "app/cards/images/happyB02.jpg",
           "url": "/cards/HB01.html"
     },
     {
         "cardTitle": "A Happy Birthday2",
-        "img": "https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95",
+        "img": "app/cards/images/happyB04.jpg",
           "url": "/cards/HB02.html"
     },
     {
         "cardTitle": "Happy Birthday3",
-        "img": "https://download.fotolia.com/Content/CompImage500/FotoliaComp_80362106_deNgYJ5oiK13697NhgxS6G9YpGOd1TlV_W95",
+        "img": "app/cards/images/happyB05.jpg",
           "url": "/cards/HB03.html"
     }
 ]

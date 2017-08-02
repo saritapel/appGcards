@@ -1,9 +1,24 @@
 
 
+var appGCard = angular.module("appcard", ["ngRoute", "ngAnimate", "ui.bootstrap"]);
 
-appGCard.controller( "cardCtrl", function($scope, $http) {
-    $http.get("data/cards.json").then(function (response) {
-        $scope.cards = response.data;
-    });
 
-});
+
+appGCard.controller("galleryCtrl", function ($scope, $http) {
+
+    function Card(galleryObject) {
+        this.cardTitle = galleryObject.cardTitle;
+        this.img = galleryObject.img;
+        this.url = galleryObject.url;
+         this.isSelected = false;
+    }
+
+
+ $http.get("app/cards/gallery.json").then(function(response) {
+    $scope.cards = [];
+    for (var i = 0; i < response.data.length; i++) {
+      $scope.cards.push(new Card(response.data[i]))
+    }
+  }, function(response) {
+    console.log("Error!!! " + response.statusText);
+  });

@@ -17,11 +17,16 @@ body {
     font-size: 4em;
     text-align: center
 }
-
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #00ccff;
+}
 h4 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    text-align: center
+    text-align: center;
 }
 
 .jumbotron .container h1 {
@@ -37,9 +42,12 @@ h4 {
     color: inherit;
     background-color: #a1eaff;
 }
+
+
+
 .imageGallery {
   float: left;
-  padding: 20px;
+  padding: 5px;
 }
 
 .well {
@@ -51,8 +59,8 @@ h4 {
 
 
 img {
-  height: 248px;
-  width: 320px;
+  height: 350px;
+  width: 350px;
   
 }
 
