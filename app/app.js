@@ -18,7 +18,7 @@ appGCard.controller("galleryCtrl", function ($scope, $http) {
  // });
 
 
- $http.get("card/gallery.json").then(function(response) {
+ $http.get("app/cards/gallery.json").then(function(response) {
     $scope.cards = [];
     for (var i = 0; i < response.data.length; i++) {
       $scope.cards.push(new Card(response.data[i]))

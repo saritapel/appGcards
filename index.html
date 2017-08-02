@@ -2,6 +2,7 @@
 <html lang="en" ng-app="appcard">
 
 
+
 <head>
     <title></title>
     <meta charset="UTF-8">
@@ -109,7 +110,7 @@
  <div  ng-controller="galleryCtrl" >
       <div class="imageGallery text-center  well center-block" ng-repeat="card in cards |  orderBy:orderProp" ng-click="liClicked(cards)" ng-class="{'item-selected':cards.isSelected}">
 
-        <img class="imageGallery " src="{{card.img}}" />
+        <img class="imageGallery " ng-src="{{card.img}}" />
         <p class="actorname"><a href="{{card.url}}" target="_blank">{{card.cardTitle}}</a></p>
       </div>
 
