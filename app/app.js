@@ -1,6 +1,5 @@
 var appGCard = angular.module("appcard", ["ngRoute", "ngAnimate", "ui.bootstrap"]);
 
-var recipeApp = angular.module("RecipeApp", ["ngRoute", "ngAnimate", "ui.bootstrap"]);
 
 appGCard.config(function ($routeProvider) {
     $routeProvider
@@ -11,27 +10,6 @@ appGCard.config(function ($routeProvider) {
        
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 appGCard.controller("galleryCtrl", function ($scope, $http) {
 
     function Card(galleryObject) {
@@ -40,12 +18,6 @@ appGCard.controller("galleryCtrl", function ($scope, $http) {
         this.url = galleryObject.url;
          this.isSelected = false;
     }
-
- // $http.get("data/galleryCards.json").then(function (response) {
-  //     $scope.GCgallery = response.data;
-
-
- // });
 
 
  $http.get("app/cards/gallery.json").then(function(response) {
@@ -56,6 +28,7 @@ appGCard.controller("galleryCtrl", function ($scope, $http) {
   }, function(response) {
     console.log("Error!!! " + response.statusText);
   });
+
 
  /////////////////////////////////////////////////////////////////////////////////////////////////
 
