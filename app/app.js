@@ -1,5 +1,35 @@
 var appGCard = angular.module("appcard", ["ngRoute", "ngAnimate", "ui.bootstrap"]);
 
+var recipeApp = angular.module("RecipeApp", ["ngRoute", "ngAnimate", "ui.bootstrap"]);
+
+appGCard.config(function ($routeProvider) {
+    $routeProvider
+        .when("/", {
+            templateUrl: "app/cards/cardsGallery.html",
+            controller: "galleryCtrl"
+        })
+       
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 appGCard.controller("galleryCtrl", function ($scope, $http) {
