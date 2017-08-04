@@ -36,8 +36,8 @@
 
    <div  ng-controller="galleryCtrl" >
 
-       <h3  >Choose a template card aaaaa </h3>
-      <div class="imageGallery text-center  well center-block" ng-repeat="card in cards |  orderBy:orderProp" ng-click="liClicked(cards)" ng-class="{'item-selected':cards.isSelected}">
+       <h3  >Choose a template card  </h3>
+      <div class="imageGallery text-center  well card-item " ng-click="openDetails($index)" ng-repeat="card in cards |  orderBy:orderProp" ng-click="liClicked(cards)" ng-class="{'item-selected':cards.isSelected}">
 
         <img class="imageGallery " ng-src="{{card.img}}" />
         <p class="actorname"><a href="{{card.url}}" target="_blank">{{card.cardTitle}}</a></p>
@@ -47,3 +47,5 @@
 
 
   <div class="clearfix"></div>
+
+

@@ -1,13 +1,15 @@
 var appGCard = angular.module("appcard", ["ngRoute", "ngAnimate", "ui.bootstrap"]);
 
-
 appGCard.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "app/cards/cardsGallery.html",
             controller: "galleryCtrl"
         })
-       
+       .when("app/cards", {
+            templateUrl: "app/cards/cardsGallery.html",
+            controller: "galleryCtrl"
+        })
 });
 
 appGCard.controller("galleryCtrl", function ($scope, $http) {
@@ -19,7 +21,6 @@ appGCard.controller("galleryCtrl", function ($scope, $http) {
          this.isSelected = false;
     }
 
-
  $http.get("app/cards/gallery.json").then(function(response) {
     $scope.cards = [];
     for (var i = 0; i < response.data.length; i++) {
@@ -28,8 +29,9 @@ appGCard.controller("galleryCtrl", function ($scope, $http) {
   }, function(response) {
     console.log("Error!!! " + response.statusText);
   });
+/*
 
-
+*/
  /////////////////////////////////////////////////////////////////////////////////////////////////
 
 

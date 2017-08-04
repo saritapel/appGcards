@@ -75,3 +75,7 @@ img {
     clear: both;
     display: table;
 }
+
+.card-item {
+    cursor: pointer;
+}
