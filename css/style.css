@@ -57,10 +57,29 @@ h4 {
 }
 
 
+#name-span {
+        position: relative;
+    top: 171px;
+    margin-left: 231px;
+    font-size: 26px;
+}
+
+#sender-span {
+    position: relative;
+    top: 271px;
+    margin-left: 231px;
+    font-size: 26px;
+}
 
 img {
   height: 350px;
   width: 350px;
+  
+}
+
+.img-big {
+  height: 400px;
+  width: 400px;
   
 }
 

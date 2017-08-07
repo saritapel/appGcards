@@ -6,9 +6,10 @@ appGCard.config(function ($routeProvider) {
             templateUrl: "app/cards/cardsGallery.html",
             controller: "galleryCtrl"
         })
-       .when("app/cards", {
-            templateUrl: "app/cards/cardsGallery.html",
-            controller: "galleryCtrl"
+   
+         .when("/cards/:cardIndex", {
+            templateUrl: "app/cards/cardDetails.html",
+            controller: "cardDetailsCtrl"
         })
 });
 
@@ -32,6 +33,19 @@ appGCard.controller("galleryCtrl", function ($scope, $http) {
 /*
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
  /////////////////////////////////////////////////////////////////////////////////////////////////
 
 

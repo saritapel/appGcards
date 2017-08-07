@@ -1,34 +1,20 @@
-
-<!--<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-    
-    <form action="detail" method="POST" class="form-horizontal" role="form">
-            <div class="form-group">
-                <legend>Form title</legend>
-            </div>
-    
-            
-    
-            <div class="form-group">
-                <div class="col-sm-10 col-sm-offset-2">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-    </form>
-    
-</div>
-This view is responsible for showing, updating and deleting a recipe-->
 <div class="container">
 
   <div class="page-header">
     <h1>{{card.cardTitle}}</h1>
   </div>
-
   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
     <form class="form-horizontal">
       <div class="form-group">
-        <label class="control-label col-sm-2" for="name">Name:</label>
-        <div class="col-sm-10">
+        <label class="control-label col-sm-2" for="name">To:</label>
+        <div class="col-sm-4">
           <input type="text" class="form-control" id="name" placeholder="Enter birthday name" ng-model="card.name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="name">Sender:</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="name" placeholder="Enter the sender name" ng-model="card.sender">
         </div>
       </div>
      
@@ -36,11 +22,11 @@ This view is responsible for showing, updating and deleting a recipe-->
       
      
       <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
+        <div class="col-sm-offset-2 col-sm-4">
           <div class="pull-right">
-            <button type="summit" class="btn btn-default" ng-click="cancel()">Cancel</button>
-            <button type="summit" class="btn btn-primary" ng-click="update()">Update</button>
-            <button type="summit" class="btn btn-danger" ng-click="remove()">Delete</button>
+            <button type="submit" class="btn btn-default" ng-click="back()">back</button>
+            <button type="submit" class="btn btn-primary" ng-click="update()">Update</button>
+            <button type="submit" class="btn btn-danger" ng-click="remove()">Delete</button>
           </div>
         </div>
       </div>
@@ -49,26 +35,11 @@ This view is responsible for showing, updating and deleting a recipe-->
 
 
   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-    <img ng-src="{{card.img}}" class="img-responsive block-center" alt="Image">ssss
+    <span id="name-span">{{card.name}}</span>
+    <span id="sender-span">{{card.sender}}</span>
+    <img ng-src="{{card.img}}" class=" img-responsive block-center" alt="Image">ssss
   </div>
 
 
 </div>
-
-
- 
-
-   <div  ng-controller="galleryCtrl" >
-
-       <h3  >Choose a template card  </h3>
-      <div class="imageGallery text-center  well card-item " ng-click="openDetails($index)" ng-repeat="card in cards" """>
-
-        <img class="imageGallery " ng-src="{{card.img}}" />
-        <p class="actorname"><a href="{{card.url}}" target="_blank">{{card.cardTitle}}</a></p>
-      </div>
-
-    </div>
-
-
-  <div class="clearfix"></div>
 

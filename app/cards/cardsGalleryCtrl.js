@@ -4,7 +4,7 @@
 
 
 
-appcard.controller("galleryCtrl", function ($scope, $http, $location, cards, $routeParams, card) {
+appGCard.controller("galleryCtrl", function ($scope, $http, $location,  $routeParams, cardService ) {
 
     function Card(galleryObject) {
         this.cardTitle = galleryObject.cardTitle;
@@ -17,20 +17,26 @@ appcard.controller("galleryCtrl", function ($scope, $http, $location, cards, $ro
  }
 
 
-
- $http.get("app/cards/gallery.json").then(function(response) {
-    $scope.cards = [];
-    for (var i = 0; i < response.data.length; i++) {
-      $scope.cards.push(new Card(response.data[i]))
+    // Making sure that we are only loading once
+    if (cardService.getAll().length === 0) {
+        $scope.cards = [];
+      $http.get("app/cards/gallery.json").then(function(response) {
+            cardService.load(response.data);
+            $scope.cards = cardService.getAll();
+        });
+    } else {
+        $scope.cards = cardService.getAll();
     }
-  }, function(response) {
-    console.log("Error!!! " + response.statusText);
-  }
 
-   $scope.openDetails = function(index) {
-        $location.path("/card/" + index)
-    });
+    $scope.openDetails = function(index) {
+        $location.path("/cards/" + index)
+    }
+
+});
+   
+
+   
 
 
-////////////////////////////////////////////////////////////
+
 
