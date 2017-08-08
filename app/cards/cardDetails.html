@@ -1,32 +1,39 @@
 <div class="container">
 
   <div class="page-header">
-    <h1>{{card.cardTitle}}</h1>
+    <h3>The Selected Card: {{card.cardTitle}}</h3>
   </div>
   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
     <form class="form-horizontal">
       <div class="form-group">
-        <label class="control-label col-sm-2" for="name">To:</label>
+        <label class="control-label col-sm-2" for="name">Name:</label>
         <div class="col-sm-4">
           <input type="text" class="form-control" id="name" placeholder="Enter birthday name" ng-model="card.name">
         </div>
       </div>
       <div class="form-group">
-        <label class="control-label col-sm-2" for="name">Sender:</label>
+        <label class="control-label col-sm-2" for="name">Sender Name:</label>
         <div class="col-sm-4">
           <input type="text" class="form-control" id="name" placeholder="Enter the sender name" ng-model="card.sender">
         </div>
       </div>
+     <div class="form-group">
+        <label class="control-label col-sm-2" for="name">e-mail:</label>
+        <div class="col-sm-4">
+           <input type="email" class="form-control"  name="" id="input1/(\w+)/\u\1/g" class="form-control" value="" required="" title="" placeholder="send to email">
      
-     
+         
+        </div>
+      </div> 
+    
       
      
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-4">
           <div class="pull-right">
             <button type="submit" class="btn btn-default" ng-click="back()">back</button>
-            <button type="submit" class="btn btn-primary" ng-click="update()">Update</button>
-            <button type="submit" class="btn btn-danger" ng-click="remove()">Delete</button>
+            <button type="submit" class="btn btn-primary" ng-click="update()">Send</button>
+           
           </div>
         </div>
       </div>
@@ -37,7 +44,15 @@
   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
     <span id="name-span">{{card.name}}</span>
     <span id="sender-span">{{card.sender}}</span>
-    <img ng-src="{{card.img}}" class=" img-responsive block-center" alt="Image">ssss
+    <img ng-src="{{card.img}}" class=" img-responsive block-center" alt="Image">
+  </div>
+  <!--   -->
+ <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+      <span id="name-span">{{card.name}}</span>
+    <span id="sender-span">{{card.sender}}</span>
+     <canvas id="myCanvas" width="100" height="100" style="border:1px solid #d3d3d3;">
+      Your browser does not support the HTML5 canvas tag.</canvas>
+   <img ng-src="{{card.img}}" class=" img-responsive block-center" alt="Image">
   </div>
 
 
