@@ -1,0 +1,46 @@
+<div class="container">
+
+  <div class="page-header">
+    <p>The selected card </p>
+    <h1>{{card.cardTitle}}</h1>
+  </div>
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="name">email send to:</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="name" placeholder="Enter email send to:" ng-model="card.name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="name">Sender email:</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="name" placeholder="Enter the your email" ng-model="card.sender">
+        </div>
+      </div>
+     
+     
+      
+     
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+          <div class="pull-right">
+            <button type="submit" class="btn btn-default" ng-click="back()">back</button>
+            <button type="submit" class="btn btn-primary" ng-click="update()">send</button>
+            <button type="submit" class="btn btn-danger" ng-click="remove()">sender</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    <span id="name-span">{{card.name}}</span>
+    <span id="sender-span">{{card.sender}}</span>
+    <img ng-src="{{card.img}}" class=" img-responsive block-center" alt="Image">ssss
+  </div>
+
+
+</div>
+
