@@ -19,7 +19,7 @@
        <h3  >Choose a template card  </h3>
       <div class="imageGallery text-center  well card-item " ng-click="openDetails($index)"  ng-repeat="card in cards |  orderBy:orderProp"  ng-class="{'item-selected':cards.isSelected}">
 
-        <img id="pic" class="imageGallery " ng-src="{{card.imgGallery}}" />
+        <img id="pic" class="imageGallery img-g" ng-src="{{card.imgGallery}}" />
         <p >{{card.cardTitle}}</p>
       </div>
 

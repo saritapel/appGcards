@@ -11,7 +11,7 @@ appGCard.controller("cardDetailsCtrl", function ($scope, $location, $routeParams
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
         var img = document.getElementById("pic");
-        ctx.drawImage(img, 0, 0, 400, 400);
+        ctx.drawImage(img, 0, 0, 500, 500);
     }
 
 
@@ -39,20 +39,20 @@ appGCard.controller("cardDetailsCtrl", function ($scope, $location, $routeParams
         if ($scope.card.name) {
             ctx.font = "30px Arial";
             var img = document.getElementById("pic");
-            ctx.drawImage(img, 0, 0, 400, 400);            
-            ctx.fillText($scope.card.name, 50, 50);
+            ctx.drawImage(img, 0, 0, 500, 500);            
+            ctx.fillText($scope.card.name, 330, 180);
             if ($scope.card.sender)
-                ctx.fillText($scope.card.sender, 50, 50);
+                ctx.fillText($scope.card.sender, 340, 370);
 
         }
 
         if ($scope.card.sender) {
             ctx.font = "30px Arial";
             var img = document.getElementById("pic");
-            ctx.drawImage(img, 0, 0, 400, 400);
-            ctx.fillText($scope.card.sender, 50, 250);
+            ctx.drawImage(img, 0, 0, 500, 500);
+            ctx.fillText($scope.card.sender, 340, 370);
             if ($scope.card.name)
-                ctx.fillText($scope.card.name, 50, 50);
+                ctx.fillText($scope.card.name, 330, 180);
 
         }
 
@@ -71,47 +71,3 @@ appGCard.directive('imageonload', function() {
         };
     })
 
-/*
- myCanvas();
- 
- 
-
-
-  function myCanvas() {
-      var c = document.getElementById("myCanvas");
-      var ctx = c.getContext("2d");
-      var img = document.getElementById(cardIndex);
-      ctx.drawImage(img, 10, 10);
-
-      var c = document.getElementById("myCanvas");
-      var ctx = c.getContext("2d");
-      ctx.font = "30px Arial";
-      ctx.fillText("name", 50, 50);
-
-      var c = document.getElementById("myCanvas");
-      var ctx = c.getContext("2d");
-      ctx.font = "30px Arial";
-      ctx.fillText("name2", 50, 250);
-
-    }
-    */
-
-/*
-  function myCanvas() {
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-      var img = document.getElementById("pic");
-    ctx.drawImage(img, 10, 10);
-
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    ctx.font = "30px Arial";
-    ctx.fillText("name", 50, 50);
-
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    ctx.font = "30px Arial";
-    ctx.fillText("name2", 50, 250);
-
-}
-*/

@@ -72,14 +72,14 @@ h4 {
 }
 
 img {
-  height: 350px;
-  width: 350px;
+  height: 500px;
+  width: 500px;
   
 }
 
-.img-big {
-  height: 400px;
-  width: 400px;
+.img-g {
+  height: 350px;
+  width: 350px;
   
 }
 
@@ -88,6 +88,9 @@ img {
 }
 
 
+.hide {
+    display: none;
+}
 
 .clearfix::after {
     content: "";
