@@ -3,6 +3,7 @@ appGCard.factory("Card", function(){
     function Card(galleryObject) {
         this.cardTitle = galleryObject.cardTitle;
         this.img = galleryObject.img;
+        this.imgGallery = galleryObject.imgGallery;
         this.url = galleryObject.url;
          this.isSelected = false;
     }

@@ -1,25 +1,29 @@
 [
     {
         "cardTitle": "Happy Birthday",
-        "img": "app/cards/images/happyB01.jpg",
+        "img": "app/cards/images/happyBe01.jpg",
+        "imgGallery": "app/cards/images/happyB01.jpg",
         "url": "app/cards/HB00.html",
          "id":  "01"
     },
     {
         "cardTitle": "Dad Happy Birthday",
-        "img": "app/cards/images/happyB02.jpg",
+        "img": "app/cards/images/happyBe02.jpg",
+        "imgGallery": "app/cards/images/happyB02.jpg",
           "url": "/cards/HB01.html",
            "id":  "02"
     },
     {
         "cardTitle": "A Happy Birthday2",
-        "img": "app/cards/images/happyB04.jpg",
+        "img": "app/cards/images/happyBe04.jpg",
+        "imgGallery": "app/cards/images/happyB04.jpg",
           "url": "/cards/HB02.html",
            "id":  "03"
     },
     {
         "cardTitle": "Happy Birthday3",
-        "img": "app/cards/images/happyB05.jpg",
+        "img": "app/cards/images/happyBe05.jpg",
+        "imgGallery": "app/cards/images/happyB05.jpg",
           "url": "/cards/HB03.html",
            "id":  "04"
     }
