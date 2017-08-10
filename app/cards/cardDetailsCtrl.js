@@ -37,7 +37,7 @@ appGCard.controller("cardDetailsCtrl", function ($scope, $location, $routeParams
         var ctx = c.getContext("2d");
 
         if ($scope.card.name) {
-            ctx.font = "30px Arial";
+            ctx.font = "20px Arial";
             var img = document.getElementById("pic");
             ctx.drawImage(img, 0, 0, 450, 450);            
             ctx.fillText($scope.card.name, 300, 160);
@@ -47,7 +47,7 @@ appGCard.controller("cardDetailsCtrl", function ($scope, $location, $routeParams
         }
 
         if ($scope.card.sender) {
-            ctx.font = "30px Arial";
+            ctx.font = "20px Arial";
             var img = document.getElementById("pic");
             ctx.drawImage(img, 0, 0, 450, 450);
             ctx.fillText($scope.card.sender, 310, 340);

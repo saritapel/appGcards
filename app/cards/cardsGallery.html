@@ -1,30 +1,41 @@
 
 
- <form class="text-center">
-    <input type="text" name="search" id="search" placeholder="Filter cards" ng-model="filterText" /> Sort by:
-    <select ng-model="orderProp">
+<div>
+
+  <h1 class="line-space" ><small>Send a greeting card to someone and make him happy! </small></h1><br>
+  <h4 class="line-space"> 
+    <span class="glyphicon glyphicon-menu-right  btn btn-info btn-lg"></span>  Choose a designed greeting card  
+   <span class="glyphicon glyphicon-menu-right btn btn-info btn-lg"></span>  Enter his/her name and your name  
+   <span class="glyphicon glyphicon-menu-right btn btn-info btn-lg"></span>  Create a personal greeting card  
+  </h4>
+  <br>
+  <br>
+
+<form class="text-center">
+  <!--<input type="text" name="search" id="search" placeholder="Filter cards" ng-model="filterText" /> -->Sort by:
+  <select ng-model="orderProp">
       <option value="">None</option>
       <option value="cardTitle">Card Title</option>
      
 
     </select>
-    <br>
-    <br>
+  <br>
+  <br>
 
 
-  </form>
+</form>
 
-   <div>
+  <div class="imageGallery text-center  well card-item " ng-click="openDetails($index)" ng-repeat="card in cards |  orderBy:orderProp"
+    ng-class="{'item-selected':cards.isSelected}">
 
-       <h3  >Choose a template card  </h3>
-      <div class="imageGallery text-center  well card-item " ng-click="openDetails($index)"  ng-repeat="card in cards |  orderBy:orderProp"  ng-class="{'item-selected':cards.isSelected}">
+    <img id="pic" class="imageGallery img-g" ng-src="{{card.imgGallery}}" />
+    <p>{{card.cardTitle}}</p>
+  </div>
 
-        <img id="pic" class="imageGallery img-g" ng-src="{{card.imgGallery}}" />
-        <p >{{card.cardTitle}}</p>
-      </div>
-
-    </div>
+  </div>
 
 
   <div class="clearfix"></div>
 
+  
+  
